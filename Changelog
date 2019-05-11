@@ -1,0 +1,80 @@
+Changelog
+=========
+
+11.May 2019
+-----------
+
+* rewrote checkheader function, speed increase by 300xtimes :) (1s vs. 3m) 
+
+
+10.May 2019
+-----------
+
+* added threaded checkheader analysis, a bit faster now
+* set threads via argument
+* fixed KeyError: 8 bug
+* added types definition, to write shorter code and remove several long if loops
+* changed group to category variables, as category fits the definition much better
+* added option for viewing plugins of one category only
+
+
+9.May 2019
+-----------
+
+* added alpha version of strings feature
+* added some crypto magics
+* fixed extraction option
+* catching permission denied at files
+* added suffix header to ff header file
+* enhance string feature
+* add string analysis file and method
+
+8.May 2019
+-----------
+
+* added NAME to FUDGEheader plugins
+* added more information to fudge plugin listing
+* cleaned up one plugin function
+* cleaned up group plugin function
+
+6.May 2019
+-----------
+
+* ported code to python3
+* cleaned up some parts
+
+
+Somewhen in 2008 
+----------------
+
+* initial tool, around 80 magic checks and free bugs
+
+Todo
+====
+
+* add wait for running threads in main part
+* enhance extract method to work with threaded checkheader
+* add to internal repo
+* fix suffix bug at extraction
+* enhance self.cut dict with date
+* add queue to self.cut, so it is thread safe
+* add logging library for real logging and output
+* add entropy check
+* add libmagic python wrapper
+* use magic.mgc for 2nd analysis 
+* add raw string search option
+* fix generate report option
+* add lzma unpacker
+* add bruteforce mode for lzma
+Missing FS Plugins:
+
+- YAFFS (yet another flash file system)
+- UBIFS
+- LogFS
+
+
+Done
+====
+* rewrote the checkheader method, prio 1 enhancement finished :)
+* add threading to ff analysis
+* .... a lot :>
