@@ -1,0 +1,30 @@
+# this is a header file for the strings analysis function
+# it is kept in simple csv style; so it can easily edited
+# the idea is to add strings possibly found in firmwares
+# hints on what it is and a description
+# 
+# it is *not* made to repeat magic strings already existing in
+# fudge database or libmagic/magic.mgc database
+#
+# needle: 
+# all search strings(needle) are written in lower case; however FF will check 
+# for lower and capital letters
+# 
+# shortdesc:
+# add a short description
+#
+# tools:
+# possible tools or url?
+#
+# format
+# needle;shortdesc;tools 
+linux;Linux string has been found; possibly linux OS or file;http://www.kernel.org
+kernel;Kernel strings has been found; sneak around and check if more information is existing;hexdump -C
+supertask;Supertask(RTOS) found;google 
+trontask;Trontask(RTOS) found;google 
+ILC 150 GSM Upgrade;inline gsm modem;https://www.phoenixcontact.com/online/portal/de?uri=pxc-oc-itemdetail:pid=2916545&library=dede&tab=1
+SPI Flash Image; SPI access available;http://linux-sunxi.org/Bootable_SPI_flash
+/etc;linux etc directory;google
+/mnt;linux mnt directory;google
+/etc/shadow;shadow file;shadow
+/etc/passwd;passwd file;passwd

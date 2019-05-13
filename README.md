@@ -6,7 +6,7 @@ This code is for automated analysis of files you may find around the internet. P
 
 The original version had been built in 2007. In the last weeks, i had started to fix a lot of code, add features or clean some parts up. 
 
-FirmwareFudger is far from what it's goal is, but it is already handy :)
+FirmwareFudger is far from what it's in my head, but it is already handy :)
 
 
 ## How to use the tool:

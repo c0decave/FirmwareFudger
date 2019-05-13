@@ -1,0 +1,24 @@
+Release Notes 0.5.2
+===================
+
+After quite some time, i decided to spend some dedication to this old tool i had written. There
+lies over a decade between v0.3 and the current version 0.5.2.
+
+Improvements:
+
+*	FF has been ported to python3
+* 	speed, 0.3 had a naive approach of parsing files, with a lot of extra requests,
+	this had been changed, the speed improovements are over 300 times, so analysis of a firmware
+	currently takes some seconds
+*	bugs been fixed, one long term bug, was the always wrong suffix of a file type, this is
+	normally no problem, however tools like gzip do not like it if .gz is missing, so i fixed
+	the issue
+*	code cleanups and refactory, had been done a lot, and there is still a lot to add
+*	using argparse over getopt, as argparse is simply the better and more supportive alternative
+*	there is an experimental method called strings, while the normal version is known to 
+	everyone, this version also does an analysis to dig up some more information about the file
+	more code and explanations will come
+*	FF is now working with threads, which has some extra time improvements during analysis
+*	FF is now using Queues at several stages
+
+
