@@ -82,7 +82,7 @@ List all FirmwareFudger internal database magics for a certain category:
 ```
 %./ffudger.py -Flc CRYPTO
 
-[+] CRYPTO:
+ [+] CRYPTO:
                 - DSAPRIV - DSAPRIV - Private Key in DSA Format
                 - RSAPRIV - RSAPRIV - Private Key in RSA Format
                 - SSHDSS - SSHDSS - Public ssh key
@@ -96,14 +96,15 @@ Searching for all  patterns:
 ```
 %./ffudger.py -f /bin/ls 
 
-[+] Open /bin/ls
-[+] Filename /bin/ls
-[+] Size 134.45K - 137680B
-[+] User 0
-[+] Group 0
-[+] Checking for all FF plugins
-[+] FOUND ELF at Offset 0 to 4
-[+] Found 1 possible types
+ [+] Open /bin/ls
+ [+] Filename /bin/ls
+ [+] Size 134.45K - 137680B
+ [+] User 0
+ [+] Group 0
+ [+] Checking for all FF plugins
+ [+] FOUND ELF at Offset 0 to 4
+ [+] Found 1 possible types
+
 ```
 
 Search with all magics of FF database and extract the results:
@@ -184,10 +185,74 @@ Searching for a class of patterns:
 [+] FILENAME: _bin_ls/FF-Extract-True-0.elf
 ```
 
-## Outro:
+## Magic FF Database
 
-That's it guys'n'girls. I hope you can use it for some good. For any further questions on the code you can contact me via email
+This is my approach 2008 back to build up an own database of interesting magic headers. It is
+sort of outdated nowadays as we have magic. However, it can be quickly enhanced for your matters
+as it is quite easy to understand. In the future i might change it to a (No)Sql database, for 
+easier use.
+If you got magic headers from analysis you want to share, not part of libmagic or
+not described correctly you are more then welcome.
 
-## Disclaimer:
+## Supply/strings.txt
+
+Ok, what is this feature you might ask. First, lets do a cat on supply/strings.txt:
+
+```
+linux;Linux string has been found; possibly linux OS or file;http://www.kernel.org
+kernel;Kernel strings has been found; sneak around and check if more information is existing;hexdump -C
+supertask;Supertask(RTOS) found;google 
+trontask;Trontask(RTOS) found;google 
+ILC 150 GSM Upgrade;inline gsm modem;https://www.phoenixcontact.com/online/portal/de?uri=pxc-oc-itemdetail:pid=2916545&library=dede&tab=1
+SPI Flash Image; SPI access available;http://linux-sunxi.org/Bootable_SPI_flash
+/etc;linux etc directory;google
+```
+
+This is a CSV oriented file, the delimiter is ';'. The idea is to place strings and sort of 
+description to support analysis of firmwares or files found. It is not made as a place for magic
+headers but to aid on certain interesting strings which can be found. 
+It is *definitly* a place for strings which name the Operating System used or special build 
+parts or alike. I'am quite happy if you add new items, add a merge request or send it to 
+me via E-Mail.
+
+
+
+
+# Roadmap
+
+## Roadmap Version 0.6.0
+
+For release 0.6.0 the following features are planed:
+
+- logging import, for better logging and output
+- enhance strings function
+- libmagic feature, to enhance the checking database
+- entropy scan
+- setup.py setuptools installer
+- bruteforce unpacker :)
+
+## Roadmap Version 0.7.0
+
+For release 0.7.0 the following features are planed:
+
+- design plugin interface for extra code and 3rd party plugins
+- automatic unpackers for lzma,bzip,zip,gzip and others
+- sanity checks for packers (decrease counts of false positives like .gz or .arj)
+- enhance reporting feature
+- add pdf output format
+
+# Contact:
+
+Although, i do have quite an feature list by myself, I'am quite happy if you have feature requests or even better input from your analysis to add to FirmwareFudger. 
+Also, open up bugs if you find them, i will find the time to fix them.
+Everything you do not want to share directly over github.com send here:
+
+d4shmail@gmail.com
+
+# Disclaimer:
 
 None :)
+
+# Outro:
+
+That's it guys'n'girls. I hope you can use it for some good. For any further questions on the code you can contact me via email
