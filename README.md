@@ -32,6 +32,7 @@ Around 86 supported magics right now.
 
 List all FirmwareFudger internal database magics for a certain category:
 
+```
 %./ffudger.py -Flc CRYPTO
 
 [+] CRYPTO:
@@ -41,9 +42,11 @@ List all FirmwareFudger internal database magics for a certain category:
                 - CACERT - CACERT - Certificate Format
                 - CERTREQ - CERTREQ - Certificate Request Format
                 - PGPMSG - PGPMSG - Pretty Good Privacy Message Format
+```
 
 Searching for all  patterns:
 
+```
 %./ffudger.py -f /bin/ls 
 
 [+] Open /bin/ls
@@ -54,9 +57,11 @@ Searching for all  patterns:
 [+] Checking for all FF plugins
 [+] FOUND ELF at Offset 0 to 4
 [+] Found 1 possible types
+```
 
 Search with all magics of FF database and extract the results:
 
+```
 ./ffudger.py -f /bin/ls -x
 
 [+] Creating directory _bin_ls
@@ -69,13 +74,17 @@ Search with all magics of FF database and extract the results:
 [+] Checking for all FF plugins
 [+] FOUND ELF at Offset 0 to 4
 [+] FILENAME: _bin_ls/FF-Extract-True-0.elf
+```
 
+Check that file with "file":
+```
 % file _bin_ls/FF-Extract-True-0.elf
 _bin_ls/FF-Extract-True-0.elf: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0
+```
 
 If no directory is given, FF will create one, given by the name of the to analyse file. However, you can of course set one:
 
-
+```
 ./ffudger.py -f /bin/ls -x -o test_dir
 
 [+] Creating directory test_dir
@@ -89,9 +98,12 @@ If no directory is given, FF will create one, given by the name of the to analys
 [+] FOUND ELF at Offset 0 to 4
 [+] Found 1 possible types
 [+] FILENAME: test_dir/FF-Extract-True-0.elf
+```
+
 
 Searching for just one patterntype:
 
+```
 %./ffudger.py -f /bin/ls -Fp ELF
 
 [+] Fudger Version 0.5.2 - Fileinformation
@@ -104,10 +116,11 @@ Searching for just one patterntype:
 [+] FOUND ELF at Offset 0 to 4
 [+] Found 1 possible types
 [+] FILENAME: _bin_ls/FF-Extract-True-0.elf
-
+```
 
 Searching for a class of patterns:
 
+```
 %python fudge.py -f /bin/ls -P EXEC
 
 [+] Open /bin/ls
@@ -122,13 +135,12 @@ Searching for a class of patterns:
 [.] Waiting for threads to finish 1
 [+] Found 1 possible types
 [+] FILENAME: _bin_ls/FF-Extract-True-0.elf
+```
 
-Outro:
-======
+## Outro:
 
 That's it guys'n'girls. I hope you can use it for some good. For any further questions on the code you can contact me via email
 
-Disclaimer:
-===========
+## Disclaimer:
 
 None :)
