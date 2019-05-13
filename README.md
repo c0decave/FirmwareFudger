@@ -1,6 +1,6 @@
 
 # FirmwareFudger
-##Intro:
+## Intro:
 
 This code is for automated analysis of files you may find around the internet. Primarily it was coded for the investigation of firmwares of devices. But you can use it generally for pattern recognition.
 
@@ -9,23 +9,24 @@ The original version had been built in 2007. In the last weeks, i had started to
 FirmwareFudger is far from what it's goal is, but it is already handy :)
 
 
-##How to use the tool:
+## How to use the tool:
 
 Get some help (or simply give no argument at all):
-> %./ffudger.py -h 
+` %./ffudger.py -h `
 
 List all FirmwareFudger internal database magics:
 
-> %./ffudger.py -Fl
->
-> FS:
->                - MSDOS - MSDOS - Filesystem
->                - CRAMFS1 - CRAMFS - Compressed ROMFS
->                - CRAMFS2 - CRAMFS2 - Compressed ROMFS
->                - ROM1FS - ROM1FS - ROM FILE SYSTEM
->                - SQUASHFS - SQUASHFS - Big Endian
->
-> [...] 
+``` %./ffudger.py -Fl
+
+ FS:
+                - MSDOS - MSDOS - Filesystem
+                - CRAMFS1 - CRAMFS - Compressed ROMFS
+                - CRAMFS2 - CRAMFS2 - Compressed ROMFS
+                - ROM1FS - ROM1FS - ROM FILE SYSTEM
+                - SQUASHFS - SQUASHFS - Big Endian
+
+ [...] 
+```
 
 Around 86 supported magics right now.
 
