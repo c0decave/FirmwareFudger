@@ -13,6 +13,53 @@ FirmwareFudger is far from what it's goal is, but it is already handy :)
 
 Get some help (or simply give no argument at all):
 ` %./ffudger.py -h `
+Output:
+```
+usage: FirmwareFudger v0.5.2 by dash (May of 2019) [-h] [-f INFILE]
+                                                   [-o OUTDIR] [-O OUTPREFIX]
+                                                   [-x] [-F] [-S]
+                                                   [-Sl STR_MINLEN]
+                                                   [-Sf STR_FILTER] [-M]
+                                                   [-Fp LONELYPLUGIN]
+                                                   [-Fc FF_CAT] [-Fl]
+                                                   [-Flc FUDGELIST_CAT]
+                                                   [--threads THREADS] [-v]
+                                                   [--debug] [-r] [-V]
+
+FirmwareFudger, written to do better firmware analysis
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f INFILE, --input-file INFILE
+                        define the file to analyze
+  -o OUTDIR, --outdir OUTDIR
+                        define the directory to save extracted files and logs
+                        to
+  -O OUTPREFIX, --output-prefix OUTPREFIX
+                        define the prefix for the extracted name (default: FF-
+                        Extract)
+  -x, --extract         flag if you want to extract found files
+  -F, --fudge           use fudge mode (FirmwareFudgers own database)
+  -S, --strings         run strings on file and conduct analysis
+  -Sl STR_MINLEN, --strings-len STR_MINLEN
+                        the minimum length for string check
+  -Sf STR_FILTER, --strings-filter STR_FILTER
+                        the strings check filter, use regular expressions
+  -M, --magic           use magic mode (libmagic database)
+  -Fp LONELYPLUGIN, --fudge-plugin LONELYPLUGIN
+                        run only one specified plugin test
+  -Fc FF_CAT, --fudge-category FF_CAT
+                        run only a section of possible plugins (e.g. EXEC)
+  -Fl, --fudge-list     show plugins of FirmwareFudger
+  -Flc FUDGELIST_CAT, --fudge-list-cat FUDGELIST_CAT
+                        show plugins of defined group
+  --threads THREADS     define the value of maximum threads used, default is
+                        20
+  -v, --verbose         run in verbose mode
+  --debug               run in debug mode
+  -r, --report          create a report for the session
+  -V, --version         show version and tool information
+```
 
 List all FirmwareFudger internal database magics:
 
